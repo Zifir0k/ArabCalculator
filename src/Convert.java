@@ -16,12 +16,24 @@ public class Convert
         rKey.put('I',1);
         rKey.put('V',5);
         rKey.put('X',10);
+        rKey.put('L',50);
+        rKey.put('C',100);
+        rKey.put('D',500);
+        rKey.put('M',1000);
 
         aKey.put(1,"I");
         aKey.put(4, "IV");
         aKey.put(5, "V");
         aKey.put(9, "IX");
         aKey.put(10, "X");
+        aKey.put(40, "XL");
+        aKey.put(50, "L");
+        aKey.put(90, "XC");
+        aKey.put(100, "C");
+        aKey.put(400, "CD");
+        aKey.put(500, "D");
+        aKey.put(900, "CM");
+        aKey.put(1000, "M");
     }
 
     public boolean IsRim(String num)
