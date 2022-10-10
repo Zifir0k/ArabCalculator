@@ -4,7 +4,7 @@ public class Main
     public static void main(String[] args)
     {
         // Обьект который конвентирует арабские цифры в римские и обратно.
-        Convert con = new Convert();
+        Convert con = new Convert();//Работает не корректно!
         // Знаки операций.
         String[] sings = {"+" , "-" , "/" , "*"};
         //Знаки операций типа char.
