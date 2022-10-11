@@ -15,7 +15,7 @@ public class Main
         String example = scan.nextLine();
 
         //Индекс знака.
-        int indexSing = 100;//невозможно присвоить чисту значение null. присвоил не возможное значение.
+        int indexSing = -10;//невозможно присвоить чисту значение null. присвоил не возможное значение.
         for (var i = 0; i < sings.length;i++)
         {
             if (example.contains(sings[i]))
@@ -25,7 +25,7 @@ public class Main
             }
         }
         //Если нет знака. выбрасываем исключение.
-        if (indexSing <= 100)
+        if (indexSing == -10)
         {
             System.out.println("Отсуцтвует операнд.");
             return;
