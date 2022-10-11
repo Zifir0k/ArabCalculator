@@ -35,19 +35,46 @@ public class Main
         String[] data = example.split(regexSings[indexSing]);//Не принимает знак сложения и умножения:/
 
         //Проверка цифр на формат.
-        //TODO: Нужно дописать класс конверт!
-        if (con.IsRim(data[0]) == con.IsRim(data[1]))
-        {
-            int a,b;
+        if (con.IsRim(data[0]) == con.IsRim(data[1])) {
+            int a, b;
             //Определяем, римские ли это числа.
             boolean isRoman = con.IsRim(data[0]);
-            if (false)
+            if (isRoman) {
+                a = con.rimToArab(data[0]);
+                b = con.rimToArab(data[1]);
+            } else {
+                a = Integer.parseInt(data[0]);
+                b = Integer.parseInt(data[1]);
+            }
+            int result;
+            switch (sings[indexSing]) {
+                case "+":
+                    result = a + b;
+                    break;
+                case "-":
+                    result = a - b;
+                    break;
+                case "*":
+                    result = a * b;
+                    break;
+                case "/":
+                    result = a / b;
+                    break;
+                default:
+                    System.out.println("Err");
+                    return;
+            }
+            if (isRoman)
             {
-                //eсли римские - конвертируем из римских в арабские числа.
+                System.out.println(con.intRim(result));
             }else
             {
-                //Если арабские - конвертируем из строки в число .
+                System.out.println(result);
             }
+
+        }else
+        {
+            System.out.println("Разный формат");
         }
 
     }
